@@ -1,0 +1,81 @@
+﻿@model MCM.Models.ReferModel
+@{
+    ViewBag.Title = "Refer";
+    Html.EnableClientValidation(true);
+    Html.EnableUnobtrusiveJavaScript(true);
+}
+@Styles.Render("~/Content/jquery.growl.css")
+
+<p>
+    Please enter the email address of someone who may also be interested in our services.
+    We appreciate your confidence in us and thank you for your referral.
+</p>
+
+<div style="clear: both">
+
+    @Html.ValidationSummary(true, "A few fields are still empty")
+    @using (Ajax.BeginForm(new AjaxOptions { HttpMethod = "Post", OnComplete = "Refer.onComplete" }))
+    {
+        <div class="contactForm">
+            <p>
+                <span class="editor-label">
+                    @Html.LabelFor(m => m.FromName)
+                </span><span class="editor-field">
+                    @Html.TextBoxFor(m => m.FromName, new { id = "FromName" })
+                    @Html.ValidationMessageFor(m => m.FromName)
+                </span>
+            </p>
+            <p>
+                <span class="editor-label">
+                    @Html.LabelFor(m => m.ToName)
+                </span><span class="editor-field">
+                    @Html.TextBoxFor(m => m.ToName, new { id = "ToName"})
+                    @Html.ValidationMessageFor(m => m.ToName)
+                </span>
+            </p>
+            <p>
+                <span class="editor-label">
+                    @Html.LabelFor(m => m.ToEmail)
+                </span><span class="editor-field">
+                    @Html.TextBoxFor(m => m.ToEmail, new { style="width: 400px", id="ToEmail" })
+                    @Html.ValidationMessageFor(m => m.ToEmail)
+                </span>
+            </p>
+            <p>
+                <span class="editor-label">@Html.Label(" ")</span>
+                <span class="editor-field">
+                    <input type="submit" value="Send Email" />
+                </span>
+            </p>
+        </div>
+        <fieldset>
+            <legend>Sample</legend>
+            <div>
+                <span id="referSample">
+                    @Html.Raw(Model.Body)
+                </span>
+            </div>
+        </fieldset>
+
+    }
+</div>
+<div id="dialog"></div>
+@Scripts.Render("~/bundles/jqueryval")
+@Scripts.Render("~/bundles/jqueryui")
+@Scripts.Render("~/Scripts/jquery.growl.js")
+<script type="text/javascript">
+    $(function () {
+        var isSuccess = false;
+        if ('@ViewBag.IsSuccess' !== '') {
+            isSuccess = '@ViewBag.IsSuccess';
+        }
+
+        if (isSuccess) {
+            $.growl.notice({ message: '@ViewBag.Message' });
+            $("#FromName").val('');
+            $("#ToName").val('');
+            $("#ToEmail").val('');
+        }
+    });
+</script>
+

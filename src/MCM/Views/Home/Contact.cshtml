@@ -1,0 +1,127 @@
+﻿@model MCM.Models.ContactModel
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Contact Us";
+    ViewBag.BodyClass = "contact";
+    ViewBag.Description = "Please use this form to find contact information or send an email to us.";
+    ViewBag.Keywords = "contact, resources";
+    Html.EnableClientValidation(true);
+    Html.EnableUnobtrusiveJavaScript(true);
+}
+@Styles.Render("~/Content/jquery.growl.css")
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            Thank you for your interest in contacting Merwin Capital Management LLC.
+            Please write, call, or fax us using the information below. If you would like to
+            send an email, please complete the form below.
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-6">
+            <div id="contactPhone">
+                <div class="contactForm">
+                    <h3>
+                        Phone
+                    </h3>
+                    <p>
+                        <span class="editor-label">
+                            <label>
+                                Main:
+                            </label>
+                        </span> <span class="editor-field">(602) 765-8887</span>
+                    </p>
+                    <p>
+                        <span class="editor-label">
+                            <label>
+                                Toll Free:
+                            </label>
+                        </span> <span class="editor-field">(800) 290-4900</span>
+                    </p>
+                    <p>
+                        <span class="editor-label">
+                            <label>
+                                Fax:
+                            </label>
+                        </span> <span class="editor-field">(602) 765-8889</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-6">
+            <div id="contactAddress">
+                <h3>
+                    Address
+                </h3>
+                <p>
+                    Merwin Capital Management LLC<br />
+                    4850 E. Desert Cove, Suite 150<br />
+                    Scottsdale, AZ 85254-5390
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            @using (Ajax.BeginForm(new AjaxOptions { HttpMethod = "Post", OnSuccess = "Contact.onComplete" }))
+            {
+                @Html.AntiForgeryToken()
+                
+                <h3>Email</h3>
+                <div class="contactForm">
+                    <p>
+                        <span class="editor-label">
+                            @Html.Label("Your Name:")
+                        </span>
+                        <span class="editor-field">
+                            @Html.TextBoxFor(m => m.FromName, new { id = "FromName", style = "width:400px;" })
+                            @Html.ValidationMessageFor(m => m.FromName)
+                        </span>
+                    </p>
+                    <p>
+                        <span class="editor-label">@Html.Label(" ")</span>
+                        <span class="editor-field">If a response is desired, please include your contact information in the message.</span>
+                    </p>
+                    <p>
+                        <span class="editor-label">
+                            @Html.Label("Message:")
+                        </span>
+                        <span class="editor-field">
+                            @Html.TextAreaFor(m => m.Message, new { id = "Message", style = "width:760px;" })
+                            
+                        </span>
+                        <div>
+                            <span class="editor-label">@Html.Label(" ")</span>
+                            @Html.ValidationMessageFor(m => m.Message)
+                        </div>
+                    </p>
+                    <p>
+                        <span class="editor-label">@Html.Label(" ")</span>
+                        <span class="editor-field">
+                            <input id="btnSendEmail" type="submit" value="Send Email" />
+                        </span>
+                    </p>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+@Scripts.Render("~/bundles/jqueryval")
+@Scripts.Render("~/Scripts/jquery.growl.js")
+<script type="text/javascript">
+    $(function() {
+        var isSuccess = false;
+        if ('@ViewBag.IsSuccess' !== '') {
+            isSuccess = '@ViewBag.IsSuccess';
+        }
+
+        if (isSuccess) {
+            $.growl.notice({ message: '@ViewBag.Message' });
+            $("#FromName").val('');
+            $("#Message").val('');
+        }
+    });
+</script>
