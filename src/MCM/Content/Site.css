@@ -263,6 +263,8 @@ fieldset
 fieldset legend
 {
     display: inline;
+    border-bottom-style: none;
+    width: auto;
 }
 .contactForm p
 {

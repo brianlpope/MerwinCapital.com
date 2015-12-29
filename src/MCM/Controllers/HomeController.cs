@@ -1,13 +1,9 @@
-﻿using System.Web;
-using MCM.Extensions;
-
-namespace MCM.Controllers
+﻿namespace MCM.Controllers
 {
     using System;
     using System.Collections.Generic;
     using System.Linq;
     using System.Net.Mail;
-    using System.Text;
     using System.Web.Mvc;
     using Models;
 

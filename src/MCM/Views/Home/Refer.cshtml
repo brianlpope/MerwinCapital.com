@@ -14,7 +14,7 @@
 <div style="clear: both">
 
     @Html.ValidationSummary(true, "A few fields are still empty")
-    @using (Ajax.BeginForm(new AjaxOptions { HttpMethod = "Post", OnComplete = "Refer.onComplete" }))
+    @using (Html.BeginForm("Refer", "Home", FormMethod.Post))
     {
         <div class="contactForm">
             <p>
@@ -61,7 +61,6 @@
 </div>
 <div id="dialog"></div>
 @Scripts.Render("~/bundles/jqueryval")
-@Scripts.Render("~/bundles/jqueryui")
 @Scripts.Render("~/Scripts/jquery.growl.js")
 <script type="text/javascript">
     $(function () {

@@ -65,7 +65,7 @@
     </div>
     <div class="row">
         <div class="col-xs-12">
-            @using (Ajax.BeginForm(new AjaxOptions { HttpMethod = "Post", OnSuccess = "Contact.onComplete" }))
+            @using (Html.BeginForm("Contact", "Home", FormMethod.Post))
             {
                 @Html.AntiForgeryToken()
                 
