@@ -149,6 +149,7 @@
     <Content Include="images\ka-logo-195x35.png" />
     <Content Include="images\nystockexchange.jpg" />
     <Content Include="images\pillar.jpg" />
+    <Content Include="images\RobertEMerwin.jpg" />
     <Content Include="images\small_ocean.jpg" />
     <Content Include="javascripts\jquery.growl.js" />
     <Content Include="Scripts\jquery.growl.js" />
