@@ -1,10 +1,10 @@
 ﻿
     <div class="row" id="footer">
-        <div class="col-xs-5">
+        <div class="col-xs-6">
             &copy;@DateTime.Now.Year Merwin Capital Management LLC. All Rights Reserved.
         </div>
-        <div class="col-xs-7 text-right">
-            <a href="http://www.adviserinfo.sec.gov/IAPD/Firm/170319" target="_blank">SEC Disclosure</a>&nbsp;|&nbsp;
-            @Html.ActionLink("Privacy Statement", "Privacy", "Home")
+        <div class="col-xs-6 text-right">
+            <a href="http://www.adviserinfo.sec.gov/IAPD/Firm/170319" target="_blank" style="padding-right: 10px;">SEC Disclosure</a>|
+            @Html.ActionLink("Privacy Statement", "Privacy", "Home", new { style = "padding-left: 10px;" } )
         </div>
     </div>

@@ -52,11 +52,11 @@ input[type="checkbox"].input-validation-error {
 #services {
     list-style-type: none;
     padding-left: 0;
-    /*border-bottom: solid 2px black;*/
 }
     #services li {
        margin-bottom: 10px;
         font-weight: bold;
+        font-size: 15px;
     }
 .areaHeader {
     display:block;
@@ -92,13 +92,12 @@ section {
     }
 
 .header-background {
-    /*background: Url("../images/money.png") repeat-x;*/
     height: 340px;
     border-bottom: solid 2px black;
 }
 
 .title-image {
-    background: Url("../images/desert_mountains.png") no-repeat;
+    background: Url("../images/desert_mountains.jpg") no-repeat;
     height: 340px;
     border-bottom: solid 2px black;
 }
@@ -149,8 +148,8 @@ section {
 
 .financial-image {
     border: solid 3px black;
-    min-height: 506px;
-    background-image: url("../images/financial.png");
+    min-height: 508px;
+    background-image: url("../images/financial.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     margin-top: 4px;
@@ -331,4 +330,14 @@ figure {
 .menu-container ul li a.active {
     background-color: #9FABF8;
     opacity: .8;
+}
+
+.image-link {
+    height: 250px;
+    width: 300px;
+    display:inline-block;
+}
+
+.image-link-banner {
+    width: 246px; height: 69px; padding-top: 10px; background: white; opacity: .80; display:inline-block; color:black; margin-top: 10px; font-size: 16px;
 }
