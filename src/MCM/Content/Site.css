@@ -109,7 +109,7 @@ section {
     border:solid 1px black; 
     margin-top: 20px; 
     background-color: #9FABF8; 
-    opacity: .80; 
+    opacity: .90; 
     position: absolute; 
     right: 30px; 
     bottom: 20px; 
@@ -427,8 +427,7 @@ figure {
 }
 
 .menu-container ul li a.active {
-    background-color: #9FABF8;
-    opacity: .8;
+    background-color: rgba(147, 173, 200, 0.3)
 }
 
 
