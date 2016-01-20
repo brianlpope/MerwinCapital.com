@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     font-size: 14px;
-    background-color: #efefef;
+    background-color: #B5C7DB;
 }
 
 h3 {
@@ -69,12 +69,12 @@ input[type="checkbox"].input-validation-error {
     height: 40px;
     border-radius:25px;
     font-size: 18px;
-    background: #DA6F32;
-    background: -webkit-linear-gradient(#DA6F32, yellow); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(#DA6F32, yellow); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(#DA6F32, yellow); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(#9C6E3A, #ECC490); /* Standard syntax */
-    color: black;
+    background: #580D00;
+    background: -webkit-linear-gradient(#580D00, #911702); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#580D00, #911702); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#580D00, #911702); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#580D00, #911702); /* Standard syntax */
+    color: white;
     padding-left: 0;
     
 }
@@ -82,7 +82,7 @@ input[type="checkbox"].input-validation-error {
 section {
     padding: 20px;
     margin-bottom: 60px;
-    background-color: #FFF4CC;
+    background-color: #BCD6BD;
     border: 3px black solid;
 }
     #superspan {
@@ -92,32 +92,36 @@ section {
     }
 
 .header-background {
-    height: 340px;
+    height: 260px;
     border-bottom: solid 2px black;
 }
 
 .title-image {
     background: Url("../images/desert_mountains.jpg") no-repeat;
-    height: 340px;
+    height: 260px;
     border-bottom: solid 2px black;
 }
 
-.siteTitle {
-    font-size: 36px;
-    padding-top: 40px;
-    color: white;
-}
-
-.subTitle {
-    font-size: 26px;
-    color: white;
+.contact-information {
+    float:right; 
+    height: 176px; 
+    width: 300px; 
+    border:solid 1px black; 
+    margin-top: 20px; 
+    background-color: #9FABF8; 
+    opacity: .80; 
+    position: absolute; 
+    right: 30px; 
+    bottom: 20px; 
+    padding: 15px; 
+    font-weight: bold;
 }
 
 .menu-container {
     float: left;
     padding-left: 40px;
     margin-bottom: 20px;
-    background-color: #7991A4;
+    background: url(/images/menu-background.jpg) repeat-x;
 }
 
 .menu-container ul {
@@ -145,6 +149,108 @@ section {
     color: #333;
 }
 
+.image-link {
+    min-height: 250px;
+    width: 100%;
+    display:inline-block;
+    background-repeat: no-repeat !important;
+}
+
+.image-link img {
+    max-width: 160px;
+}
+
+.image-link-banner {
+    padding: 8px;
+    background: white; 
+    opacity: .80; 
+    display:inline-block; 
+    color:black; 
+    margin-top: 10px; 
+    font-size: 16px;
+}
+
+.image-link-banner span {
+    margin-left: 5px;
+    white-space:nowrap;
+    font-size:12px;
+}
+
+@media (max-width: 650px) {
+    .header-background {
+        height: 198px;
+        border-bottom: solid 2px black;
+    }
+
+    .title-image {
+        background: Url("../images/m_desert_mountains.jpg") no-repeat;
+        height: 200px;
+        border-bottom: solid 1px black;
+    }
+
+    .contact-information {
+        float: right;
+        height: 126px;
+        width: 270px;
+        border: solid 1px black;
+        margin-top: 20px;
+        background-color: #9FABF8;
+        opacity: .80;
+        position: absolute;
+        right: 10px;
+        bottom: 10px;
+        padding: 15px;
+        font-weight: bold;
+        font-size: 11px;
+        padding-top: 0;
+    }
+    .contact-information h3 {
+        margin-bottom: 0;
+        margin-top:0;
+    }
+
+    .image-link {
+        background: none !important;
+        min-height:unset;
+    }
+
+    .image-link img {
+
+    }
+
+    .menu-container {
+        float: left;
+        padding-left: 0;
+        margin-bottom: 10px;
+        background-color: #7991A4;
+    }
+
+        .menu-container ul {
+            float: left;
+            margin-bottom: 0;
+            -webkit-padding-start: 5px;
+        }
+
+            .menu-container ul li {
+                list-style: none;
+                float: left;
+            }
+
+            .menu-container ul:after {
+                clear: both;
+            }
+
+            .menu-container ul li a {
+                padding-left: 5px;
+                padding-right: 5px;
+                padding-top: 5px;
+                font-size: 12px;
+                font-weight: bold;
+                display: inline-block;
+                height: 22px;
+                color: #333;
+            }
+}
 
 .financial-image {
     border: solid 3px black;
@@ -156,19 +262,12 @@ section {
 }
 
 @media screen and (max-width: 768px) {
-    .siteTitle {
-        font-size: 20px;
-        padding-top: 18px;
-        margin-left: 110px;
-    }
-
-    .subTitle {
-        font-size: 18px;
-        margin-left: 110px;
-    }
-
     .financial-image {
         display: none;
+    }
+
+    .image-link-banner span {
+        font-size: 11px;
     }
 }
 
@@ -332,12 +431,4 @@ figure {
     opacity: .8;
 }
 
-.image-link {
-    height: 250px;
-    width: 300px;
-    display:inline-block;
-}
 
-.image-link-banner {
-    width: 246px; height: 69px; padding-top: 10px; background: white; opacity: .80; display:inline-block; color:black; margin-top: 10px; font-size: 16px;
-}

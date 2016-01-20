@@ -142,13 +142,17 @@
     <Content Include="Content\Site.css" />
     <Content Include="images\ameritradeSmallLogo.png" />
     <Content Include="images\BetterBusinessBureau.PNG" />
+    <Content Include="images\BetterBusinessBureaurDark.jpg" />
     <Content Include="images\BetterBusinessBureaurDark.PNG" />
+    <Content Include="images\building.jpg" />
     <Content Include="images\capital.jpg" />
     <Content Include="images\desert_mountains.jpg" />
     <Content Include="images\financial.jpg" />
     <Content Include="images\JordanTwoogood.jpg" />
     <Content Include="images\JudithMerwin.jpg" />
     <Content Include="images\ka-logo-195x35.png" />
+    <Content Include="images\menu-background.jpg" />
+    <Content Include="images\m_desert_mountains.jpg" />
     <Content Include="images\nystockexchange.jpg" />
     <Content Include="images\pillar.jpg" />
     <Content Include="images\RobertEMerwin.jpg" />
@@ -174,7 +178,9 @@
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
     <Content Include="Content\jquery.growl.css" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
