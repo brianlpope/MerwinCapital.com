@@ -1,0 +1,2 @@
+# mcm
+This site is currently running at http://www.merwincapital.com.  It is done in asp.net MVC and includes a contact and share with friends page along with static content.  The graphics are done in Adobe Fireworks and no, I have not checked them for accessibility.  When the customer would like to add more content to the site, I will change some of the static text to links and add more pages.  Currently there is no area of login so this is all publicly available content.
