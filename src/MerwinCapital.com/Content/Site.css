@@ -413,8 +413,11 @@ button, input[type=submit], input[type=button]
     margin-top: 20px;
 }
 
-figure {
-  float: left;
+.about-column p:first-of-type {
+    padding-top: 6px;
+}
+
+.about-column img {
   margin: 6px 10px 10px 0;
   border: solid 1px black;
     width: 140px;

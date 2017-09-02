@@ -1,15 +1,17 @@
-﻿using Microsoft.Owin;
+﻿using System;
+using System.Threading.Tasks;
+using Microsoft.Owin;
 using Owin;
 
-[assembly: OwinStartupAttribute(typeof(MerwinCapital.com.Startup))]
+[assembly: OwinStartup(typeof(MerwinCapital.com.Startup))]
 
 namespace MerwinCapital.com
 {
-    public partial class Startup
+    public class Startup
     {
         public void Configuration(IAppBuilder app)
         {
-          
+            // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=316888
         }
     }
 }
